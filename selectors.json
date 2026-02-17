@@ -1,0 +1,88 @@
+{
+  "说明": "如果网站改版，选择器失效，只需修改这个文件即可",
+  "search": {
+    "说明": "搜索相关的选择器",
+    "input_selectors": [
+      "input[placeholder*=\"搜索\"]",
+      "input[placeholder*=\"企业名称\"]",
+      "input.search-input",
+      "#search-input",
+      ".search-box input",
+      "input[name=\"key\"]",
+      ".qixin-search-input"
+    ],
+    "button_selectors": [
+      "button[type=\"submit\"]",
+      ".search-button",
+      ".search-btn",
+      "button:has-text(\"搜索\")",
+      ".icon-search",
+      "a.search-btn"
+    ]
+  },
+  "company_list": {
+    "说明": "搜索结果列表的选择器",
+    "first_result": [
+      ".company-item:first-child a",
+      ".search-result-item a",
+      ".company-list-item:first-child a",
+      "a.company-name",
+      ".result-item:first-child a"
+    ]
+  },
+  "company_detail": {
+    "说明": "公司详情页的选择器",
+    "company_name": [
+      ".company-name h1",
+      "h1.company-title",
+      ".detail-title h1",
+      "h1"
+    ],
+    "legal_person": [
+      "[data-key=\"legalPerson\"]",
+      ".legal-person",
+      ".faren",
+      "td:has-text(\"法定代表人\") + td"
+    ],
+    "registered_capital": [
+      "[data-key=\"capital\"]",
+      ".registered-capital",
+      ".zhuceziben",
+      "td:has-text(\"注册资本\") + td"
+    ],
+    "phone": [
+      ".phone-number",
+      ".contact-phone",
+      "td:has-text(\"电话\") + td",
+      "[data-key=\"phone\"]"
+    ],
+    "email": [
+      ".email",
+      ".contact-email",
+      "td:has-text(\"邮箱\") + td",
+      "[data-key=\"email\"]"
+    ],
+    "address": [
+      ".address",
+      ".company-address",
+      "td:has-text(\"地址\") + td",
+      "[data-key=\"address\"]"
+    ]
+  },
+  "tabs": {
+    "说明": "标签页选择器（股东、高管等）",
+    "shareholders": [
+      "text=股东信息",
+      "a:has-text(\"股东\")",
+      "[data-tab=\"shareholders\"]",
+      ".tab-shareholders"
+    ],
+    "executives": [
+      "text=主要人员",
+      "text=高管信息",
+      "a:has-text(\"人员\")",
+      "[data-tab=\"executives\"]",
+      ".tab-executives"
+    ]
+  }
+}

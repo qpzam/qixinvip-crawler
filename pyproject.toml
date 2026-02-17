@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qixinvip-crawler"
+version = "1.0.0"
+description = "专业的启信宝企业信息爬取工具，支持 VIP 权限"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "QixinbaoCrawler Team"}
+]
+keywords = ["crawler", "qixinbao", "web-scraping", "automation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "playwright==1.40.0",
+    "pandas==2.1.4",
+    "openpyxl==3.1.2",
+    "python-dotenv==1.0.0",
+    "aiofiles==23.2.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/qixinvip-crawler"
+Documentation = "https://github.com/your-username/qixinvip-crawler/blob/main/README.md"
+Repository = "https://github.com/your-username/qixinvip-crawler"
+Issues = "https://github.com/your-username/qixinvip-crawler/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["crawler*"]
+
+[tool.black]
+line-length = 120
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"

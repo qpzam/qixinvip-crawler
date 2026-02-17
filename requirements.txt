@@ -1,0 +1,5 @@
+playwright==1.40.0
+pandas==2.1.4
+openpyxl==3.1.2
+python-dotenv==1.0.0
+aiofiles==23.2.1

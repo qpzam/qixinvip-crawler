@@ -1,0 +1,22 @@
+# ============================================================
+# A股减持公告自动化系统 — 依赖清单
+# reduction_scraper.py dependencies
+#
+# 安装命令 (Install):
+#   pip install -r requirements_reduction.txt
+#
+# 可选增强依赖 (Optional — PDF full-text parsing):
+#   pip install pdfplumber beautifulsoup4 lxml
+# ============================================================
+
+# ── 核心依赖 (Core) ─────────────────────────────────────────
+akshare>=1.12.0          # A股行情数据（总市值、最新价）
+pandas>=2.0.0            # 数据处理与 DataFrame 操作
+requests>=2.31.0         # HTTP 请求（巨潮资讯 API）
+openpyxl>=3.1.0          # Excel 写入与格式化
+schedule>=1.2.0          # 定时任务调度
+
+# ── 可选增强依赖 (Optional - uncomment to enable) ───────────
+# pdfplumber>=0.10.0     # PDF 正文解析（--pdf 参数启用）
+# beautifulsoup4>=4.12.0 # HTML 摘要解析
+# lxml>=4.9.0            # BeautifulSoup XML/HTML 解析引擎
